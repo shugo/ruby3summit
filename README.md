@@ -58,7 +58,7 @@ p 1 / 2 #=> 0
 
 * DSLの実装に便利だから
 
-## Feature #12086の懸念点
+## Feature #12086の問題点
 
 * スレッド安全性
 * instance_execなどのサポートがない
@@ -81,6 +81,7 @@ p 1 / 2 #=> 0
 ## 新しい提案
 
 * Feature #16461: Proc#using
+    * https://bugs.ruby-lang.org/issues/16461
 
 ## Proc#using
 
