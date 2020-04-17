@@ -95,11 +95,11 @@ module IntegerDivExt
 end
 
 def instance_eval_with_integer_div_ext(obj, &block)
-  block.using(IntegerDivExt) # using IntegerDivExt in the block represented by the Proc object
+  block.using(IntegerDivExt) # blockが表すブロックでIntegerDivExtをusing
   obj.instance_eval(&block)
 end
 
-# necessary where blocks are defined (not where Proc#using is called)
+# Proc#usingを適用するブロックを書く場所で必要
 using Proc::Refinements
 
 p 1 / 2 #=> 0
